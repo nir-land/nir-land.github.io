@@ -1,52 +1,193 @@
-<html lang="en">
-<head>
-    <!-- META -->
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under construction - nir's Labs</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="https://assets.aquanir.cc/webstatic/construction.bootstrap.css">
-    <link rel="stylesheet" href="https://assets.aquanir.cc/webstatic/construction.style.css">
-    <style type="text/css">
-        div.container p.footer {
-            text-align: center;
-            bottom: 10px;
-        }
-        
-        div.containter p.footer a:link {
-            color: rgb(0,0,0,0.6);
-            text-decoration: none;
-        }
+    <title>nirland organization - nir's Labs</title>
+    <meta name="description" content="nirland organization">
+    <meta name="keywords" content="nirland organization, nir's Labs">
+    <link rel="apple-touch-icon-precomposed" href="https://cdn.nir.land/image/avatar_2020.jpg">
 
-        div.container p.footer a:hover {
-            color: rgb(0,0,0,0.6);
-            text-decoration: none;
-        }
-
-        div.container p.footer a:visited {
-            color: rgb(0,0,0,0.6);
-            text-decoration: none;
-        }
-
-        div.spaceholder {
-            height: 50px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="https://assets.aquanir.cc/webstatic/org.style.css">
+    <link rel="stylesheet" type="text/css" href="https://assets.aquanir.cc/webstatic/org.custom.css">
 </head>
+
 <body>
-    <div class="container vh-100">
-        <div class="text-center">
-            <img src="https://assets.aquanir.cc/image/construction.svg" class="h-50">
-            <h1>Under Construction</h1>
-            <p>We are working hard building this page, please check back later.</p>
-            <a href="https://lab.aquanir.cc/notes/announcement/2022/nir-land-organization-page-is-under-construction" class="btn btn-primary mt-3">Read announcement</a>
-        </div>
-        <div class="spaceholder"></div>
-        <p class="footer">&copy;
-            <script>document.write(new Date().getFullYear())</script> 
-            <a href="https://lab.aquanir.cc">nir's Labs</a>. All rights reserved.
-        </p>
+    <div class="background">
+        <canvas id="startrack" width="1920" height="1103"></canvas>
+        <div class="cover"></div>
     </div>
-</body>
-</html>
+    <div class="main">
+        <div class="ch intro">
+            <div class="container">
+                <div class="hello">
+                    <h1 id="slogan"></h1>
+                </div>
+                <div class="readme">
+                    <p>
+                        欢迎来到nirland organization公开代码仓。<br> 本项目为nir's Labs附属项目。
+                    </p>
+                    <p>
+                        <span class="b">你好，这里展示了我们公开的多数作品。</span><br> 我们所公开的项目多为Web相关，小部分项目会涉及到其他内容。
+                        <br> 我们更倾向于使用Serverless服务构建网页。
+                    </p>
+                    <p>
+                        你可以<a href="javascript:rollOnce()">点击这里</a>Roll一个我们所使用的服务/语言的标签。<br> 你可以在下方找到我们的Telegram频道和GitHub仓库链接。
+                    </p>
+                    <div class="roll-tag"></div>
+                    <p>希望我们的公开项目能够帮助到你。</p>
+                </div>
+
+                <div class="find-me">
+                    <a class="item" href="https://t.me/nirland_notify" target="_blank">
+                        <i class="neko-icon icon-telegram"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <!--
+                        <a class="item" href="mailto:hello@aquanir.cc" target="_blank">
+                        <i class="neko-icon icon-email"></i>
+                        <span>Email</span>
+                    </a>
+                    -->
+                    <a class="item" href="https://github.com/nir-land" target="_blank">
+                        <i class="neko-icon icon-github"></i>
+                        <span>Github</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="ch clear">
+            <div class="container">
+                <div class="enter-list">
+                    <a class="item" href="https://public.aquanir.cc/open-source">
+                        <div class="text">公开项</div>
+                        <div class="bg">
+                            <div class="square">
+                                <svg width="100" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="100" height="100" rx="10" fill="url(#paint0_linear)"></rect>
+									<defs>
+									<linearGradient id="paint0_linear" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+									<stop stop-color="white"></stop>
+									<stop offset="1" stop-color="white" stop-opacity="0"></stop>
+									</linearGradient>
+									</defs>
+									</svg>
+                            </div>
+
+                        </div>
+                    </a>
+                    <a class="item" href="https://lab.aquanir.cc/notes">
+                        <div class="text">说明集</div>
+                        <div class="bg">
+                            <div class="triangle">
+                                <svg width="116" height="103" preserveAspectRatio="xMidYMid meet" viewBox="0 0 116 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M49.3397 5.00001C53.1887 -1.66666 62.8113 -1.66667 66.6603 5L114.292 87.5C118.141 94.1667 113.329 102.5 105.631 102.5H10.3686C2.67061 102.5 -2.14065 94.1667 1.70835 87.5L49.3397 5.00001Z" fill="url(#paint0_linear)"></path>
+									<defs>
+									<linearGradient id="paint0_linear" x1="58" y1="0.5" x2="58" y2="104" gradientUnits="userSpaceOnUse">
+									<stop stop-color="white"></stop>
+									<stop offset="1" stop-color="white" stop-opacity="0"></stop>
+									<stop offset="1" stop-color="white" stop-opacity="0"></stop>
+									</linearGradient>
+									</defs>
+									</svg>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="item" href="javascript:nav('labs')">
+                        <div class="text">实验室</div>
+                        <div class="bg">
+                            <div class="rounded">
+                                <svg width="100" height="100" preserveAspectRatio="xMidYMid meet" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="50" cy="50" r="50" fill="url(#paint0_linear)"></circle>
+									<defs>
+									<linearGradient id="paint0_linear" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+									<stop stop-color="white"></stop>
+									<stop offset="1" stop-color="white" stop-opacity="0"></stop>
+									</linearGradient>
+									</defs>
+									</svg>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gate ch gate-labs">
+        <div class="container links">
+            <div class="ch-content">
+                <div class="clear">
+
+                    <a href="https://lab.aquanir.cc" target="_blank">
+                        <div class="item">
+                            <div class="avatar">
+                                <img src="https://cdn.nir.land/image/avatar_2020.jpg">
+                            </div>
+                            <div class="inner">
+                                <h5>主页面</h5>
+                                <p>nir's Labs 的主页面</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="http://lab.aquanir.cc/baidu-helper" target="_blank">
+                        <div class="item akarin">
+                            <div class="avatar">
+                                <img src="https://lab.aquanir.cc/baidu-helper/img/baidu_favicon_big.png">
+                            </div>
+                            <div class="inner">
+                                <h5>让我帮你百度一下</h5>
+                                <p>教不会百度的人使用百度</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="http://lab.aquanir.cc/music-unlocker" target="_blank">
+                        <div class="item akarin">
+                            <div class="avatar">
+                                <img src="https://cdn.nir.land/image/music-unlocker.png">
+                            </div>
+                            <div class="inner">
+                                <h5>音乐解锁</h5>
+                                <p>解锁加密的音乐格式</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="http://lab.aquanir.cc/under-construction" target="_blank">
+                        <div class="item akarin">
+                            <div class="avatar">
+                                <img src="https://cdn.nir.land/image/avatar_channel_kokomi_right.jpg">
+                            </div>
+                            <div class="inner">
+                                <h5>待添加...</h5>
+                                <p>一大堆项目正在赶来的路上</p>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div class="clear" style="margin-top: 30px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer ch">
+        <div class="container">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> <a href="https://lab.aquanir.cc">nir's Labs</a>. All rights reserved.</p>
+            <p>nirland organization is owned by nir's Labs.</p>
+        </div>
+    </div>
+    
+    <script src="https://assets.aquanir.cc/webstatic/org.zepto.min.js"></script>
+    <script src="https://assets.aquanir.cc/webstatic/org.page.js"></script>
+    <script type="text/javascript" src="stats" charset="UTF-8"></script>
+
+
+</body></html>

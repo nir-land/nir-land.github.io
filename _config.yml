@@ -1,1 +1,13 @@
-theme: jekyll-theme-cayman
+title: nir's Labs
+description: nir's Labs
+logo: favicon.ico
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-minimal
+
+permalink: /:slug/
+
+plugins:
+  - jekyll-redirect-from
+
+#repository: hlaueriksson/jekyll-url-shortener
